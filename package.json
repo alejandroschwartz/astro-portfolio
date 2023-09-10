@@ -10,9 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.12"
-  },
-  "devDependencies": {
-    "vite-plugin-pwa": "^0.16.5"
+    "astro": "^3.0.12",
+    "astro-webmanifest": "^1.0.0",
+    "astrojs-service-worker": "^1.1.0"
   }
 }
