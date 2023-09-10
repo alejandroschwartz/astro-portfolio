@@ -1,0 +1,142 @@
+<div class='hero__container'>
+    <section class="hero">
+        <div class="hero__image" >
+            <img 
+                src="https://res.cloudinary.com/dhdhpvhkg/image/upload/c_scale,q_80,w_260/v1692988988/Portfolio/ale-hero.webp"
+                alt="foto de perfil Alejandro Schwartz"
+                title="foto de perfil Alejandro Schwartz"
+            />
+        </div>
+        <h1 class="hero__title">
+            Hola, soy <strong>Alejandro Schwartz</strong> Desarrollador <strong>JavaScript</strong>, frontend con <strong>React</strong>.
+        </h1>
+    </section>
+    <p class="hero__text" >
+        💻 Desarrollo aplicaciones en Javascript, mejorando y profundizando constantemente en las demás tecnologías.
+        <br/> <br/> 
+        🚀 Desempeñando tareas de desarrollador Front con React, Redux, Chartjs para gráficos, Webpack, diseños Responsive y creación de PWA.
+        <br/> <br/> 
+        🏎️ Soy estudiante de ingeniería mecánica y apasionado por el deporte motor, buscando combinar mis pasiones.
+    </p>
+</div>
+
+<style>
+    .hero__container {
+        width: 100%;
+        padding: 30px 8px 0 8px;
+        box-sizing: border-box;
+        background-color: var(--color-secondary);
+        margin: auto;
+    }
+    .hero {
+        margin: auto;
+        max-width: 1240px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        box-sizing: border-box;
+    }
+    .hero__image {
+        border: 5px solid var(--color-fourth);
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 260px;
+        width: 260px;
+    }
+    .hero__image > img {
+        height: 260px;
+        width: 260px; 
+        animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+        0% { 
+            opacity: 0; 
+            filter: blur(20px);
+        }
+        10% {
+            opacity: 1;
+            filter: brightness(1.5) blur(10px);
+        }
+    }
+    .hero__title {
+        width: 700px;
+        font-family: var(--font-text);
+        font-weight: 700;
+        font-size: 40px;
+        box-sizing: border-box;
+        color: var(--color-third);
+    }
+    .hero__title strong {
+        color: var(--color-fourth);
+    }
+    .hero__text {
+        max-width: 1222px;
+        margin: auto;
+        margin-top: 48px;
+        padding-left: 12px;
+        border-left: 5px solid var(--color-fourth);
+        font-family: var(--font-text);
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .hero {
+            flex-wrap: wrap;
+        }
+        .hero__image {
+            margin: auto;
+            height: 180px;
+            width: 180px;
+        }
+        .hero__image > img {
+            height: 180px;
+            width: 180px; 
+        }
+        .hero__title {
+            width: 94%;
+            font-size: 24px;
+        }
+        .hero__text {
+            padding-left: 8px;
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        .hero__image {
+            height: 180px;
+            width: 180px;    
+        }
+        .hero__image > img {
+            height: 180px;
+            width: 180px; 
+        }
+        .hero__title {
+            width: 60%;
+            font-size: 26px;
+        }
+        .hero__text {
+            padding-left: 8px;
+            font-size: 18px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1140px) {
+        .hero__image {
+            height: 180px;
+            width: 180px;
+        }
+        .hero__image > img {
+            height: 180px;
+            width: 180px; 
+        }
+        .hero__title {
+            width: 490px;
+            font-size: 28px;
+        }
+    }
+</style>

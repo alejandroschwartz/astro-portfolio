@@ -1,0 +1,72 @@
+---
+import SvgInstagram from "./icons/SvgInstagram.astro";
+import SvgLinkedin from "./icons/SvgLinkedin.astro";
+import SvgGithub from "./icons/SvgGithub.astro";
+import SvgTwitter from "./icons/SvgTwitter.astro";
+---
+
+<div class='SocialMedia' >
+    <div class="SocialMedia__title">
+        <h3>¿CREAMOS ALGO JUNTOS?</h3>
+        <p>Contáctame por los siguientes medios.</p> <br />
+    </div>
+    <div class="SocialMedia__container">
+        <a class="SocialMedia__icon" href="https://www.linkedin.com/in/alejandro-matias-schwartz/">
+            <SvgLinkedin/>
+        </a>
+        <a class="SocialMedia__icon" href="https://github.com/alejandroschwartz">
+            <SvgGithub/>
+        </a>
+    </div>
+    <div class="SocialMedia__container">
+        <a class="SocialMedia__icon" href="https://twitter.com/_alejandrosch_">
+            <SvgTwitter/>
+        </a>
+        <a class="SocialMedia__icon" href="https://www.instagram.com/alejandro_schwartz_dev/">
+            <SvgInstagram/>
+        </a>
+    </div>
+</div>
+
+<style>
+    .SocialMedia {
+        width: 100%;
+        margin: auto;
+        padding: 120px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: var(--color-secondary);
+    }
+    .SocialMedia__title {
+        text-align: center;
+        width: 100%;
+        color: var(--color-third);
+        font-family: var(--font-text);   
+    }
+    .SocialMedia__title > h3 {
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .SocialMedia__title > p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .SocialMedia__container {
+        padding: 60px 0px;
+        display: grid;
+        grid-template-columns: 160px 160px;
+        grid-column: 160px;
+        justify-content: space-around;
+    }
+    .SocialMedia__icon {
+        width: 48px;
+        height: 48px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--color-secondary);
+        box-shadow: 20px 20px 60px #bebebe,
+                    -20px -20px 60px #ffffff;
+    }
+</style>

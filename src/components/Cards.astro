@@ -1,0 +1,29 @@
+---
+
+---
+
+<div class='Cards'>
+    <div class="Cards__container" >
+        <slot/>
+    </div>
+</div>
+
+<style>
+    .Cards {
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .Cards__container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin: auto;
+        width: 100%;
+        max-width: 1024px;
+        box-sizing: border-box;
+        background: var(--color-primary);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+</style>

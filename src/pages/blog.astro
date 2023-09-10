@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WaveHeader from '../components/icons/WaveHeader.astro';
+---
+
+<Layout title='Home Portfolio'>
+	<div class="Blog__header" >
+		<h2 class="Blog__h2" >
+			BIENVENIDO A MI BLOG!
+		</h2>
+		<WaveHeader/>
+	</div>
+	<div class="Blog" >
+		<div class="Blog__title" >
+			<h2>Aquí cargare mis publicaciones, tutoriales, notas, reflexiones y demás. Espero les guste y les sirva.</h2>
+		</div>
+
+		<div class="Blog__year" >
+			<span class="Blog__year--span">2023</span>
+		</div>
+		<div class="Blog__post--list" >
+			<a class="Blog__post" href="/blog/distrib-carpetas-react" >
+				<p>3 AGO</p>
+				<p>
+					<strong>📚 Distribución de carpetas en proyecto de React: <br />¿Cómo ordenarlas?.</strong>
+				</p>
+			</a>
+		</div>
+		<div class="Blog__year" >
+			<span class="Blog__year--span">2021</span>
+		</div>
+		<div class="Blog__post--list" >
+			<a class="Blog__post" href="/blog/config-oh-my-posh" >
+				<p>21 JUN</p>
+				<p>
+					<strong>▶️ Configurando mi terminal: <br />¿Cómo personalizar WSL en la terminal de Windows con Oh-My-Post?.</strong>
+				</p>
+			</a>
+			<a class="Blog__post" href="/blog/markdown-con-react" >
+				<p>19 JUN</p>
+				<p>
+					<strong>🚀 Mi primer post: <br />¿Como utilizar texto en formato markdown dentro de un componente en react?</strong>
+				</p>
+			</a>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.Blog__h2 {
+		width: 100%;
+		padding-top: 60px;
+		margin: auto;
+		text-align: center;
+		font-family: var(--font-text);
+		font-size: 28px;
+		font-weight: 700;
+		background-color: var(--color-secondary);
+		color: var(--color-third);
+	}
+	.Blog {
+		max-width: 1000px;
+		margin: auto;
+		padding: 32px;  
+
+	}
+	.Blog__title {
+		color: var(--color-third);
+		font-family: var(--font-text);
+		font-size: 22px;
+	}
+	.Blog__year {
+		padding-top: 36px;
+		padding-bottom: 6px;
+		margin-bottom: 6px;
+		border-bottom: 4px solid var(--color-third);
+	}
+	.Blog__year--span {
+		font-family: var(--font-text);
+		font-size: 28px;
+		font-weight: 700;
+	}
+	.Blog__post {
+		display: flex;
+		text-decoration: none;
+		color: var(--color-third);
+
+	}
+	.Blog__post:hover {
+		text-decoration: underline;
+	}
+	.Blog__post > p {
+		min-width: 70px;
+		padding: 6px 12px;
+		font-family: var(--font-text);
+		font-size: 18px;
+	}
+
+	@media only screen and (max-width: 479px) {
+		.Blog {
+			padding: 10px;
+		} 
+		.Blog__title {
+			font-size: 18px; 
+		}
+		.Blog__post {
+			padding: 8px 6px;
+			flex-direction: column;
+		}
+		.Blog__post > p {
+			margin: 0%;
+			padding: 8px 0px;
+			font-size: 16px;
+		}
+	}
+</style>

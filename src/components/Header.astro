@@ -1,0 +1,149 @@
+---
+// interface Props {
+// 	title: string;
+// }
+
+// let burgerButton = false
+// function handleClick() {
+//     let miBoton = document.getElementById("miBoton");
+//     let propiedadActual = miBoton.disabled;
+//     miBoton.disabled = !propiedadActual;
+// }
+// const { title } = Astro.props;
+---
+
+<nav class="navbarItems" >
+    <a href="/" class="navbar__logo--link" >
+        <h1 class="navbar__logo" >Alejandro Schwartz</h1>
+    </a>
+    <div class="menu__icon" id="miBoton" onclick="handleClick()" >
+        <!-- {this.state.clicked 
+            ? <FontAwesomeIcon icon={faXmark} fontSize={28} />
+            : <FontAwesomeIcon icon={faBars}  fontSize={28} />
+        } -->
+    </div>
+    <!-- <ul class={this.state.clicked ? 'nav__menu active' : 'nav__menu'} onclick="handleClick()" > -->
+    <ul class="nav__menu" >    
+        <a href="/" class="nav__links" >
+            <li>Sobre mí</li>
+        </a>
+        <a href="/projects" class="nav__links" >
+            <li>Proyectos</li>
+        </a>
+        <a href="/blog" class="nav__links" >
+            <li>Blog</li>
+        </a>
+    </ul>
+</nav>
+
+<style>
+    .navbarItems {
+        margin: 0%;
+        box-sizing: border-box; 
+        padding: 0px 16px;
+        height: 64px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar__logo--link {
+        text-decoration: none;
+    }
+    .navbar__logo {
+        color: #313434;
+        justify-self: start;
+        margin-left: 12px;
+        font-size: 26px;
+        font-family: var(--font-title);
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .nav__menu {
+        margin: 0%;
+        padding: 0%;
+        object-fit: cover;
+
+        width: 78vw;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 10px;
+        list-style: none;
+        text-align: center;
+        justify-content: end;
+    }
+    .nav__links {
+        font-family: var(--font-text);
+        font-size: 18px;
+        font-weight: 600;
+        color: #313434;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+    .nav__links:hover {
+        color: #111190;
+        border-radius: 4px;
+        transition: all 0.2s ease-out;
+    }
+    .menu__icon {
+        display: none;
+    }
+
+    @media only screen and (max-width: 960px) {
+        .navbarItems {
+            position: relative;
+        }
+        .nav__menu {
+            margin: 0%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 64px;
+            left: -100%;
+            opacity: 1;
+            transition: all 0.5s ease;
+            justify-content: start;
+        }
+        .nav__menu.active {
+            margin: 0%;
+            background: rgba(224, 224, 224, 0.9);
+            left: 0;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+        .nav__links {
+            padding: 24px 12px;
+            border: 2px solid #313434;
+            width: 80%;
+            margin: 12px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .nav__links:hover {
+            background-color: #454949;
+            border-radius: 0;
+        }
+        .navbar__logo {
+            font-size: 19px;
+            margin: 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(25%, 50%);
+        }
+        .menu__icon {
+            padding: 18px;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+</style>

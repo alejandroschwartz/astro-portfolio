@@ -1,0 +1,40 @@
+---
+import InitialState from '../InitialState';
+import Card from '../components/Card.astro';
+import Cards from '../components/Cards.astro';
+import WaveHeader from '../components/icons/WaveHeader.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='Mis proyectos'>
+    <div>
+		<h2 class="projects__h2" >
+			TODOS MIS PROYECTOS
+		</h2>
+		<WaveHeader/>
+	</div>
+	<Cards>
+		{InitialState.allProjects.map(item => (
+			<Card
+				image={item.image} 
+				source={item.source}
+				title={item.title}
+				description={item.description}
+			/>
+		))}
+	</Cards>
+</Layout>
+
+<style>
+    .projects__h2 {
+		width: 100%;
+		padding-top: 60px;
+		margin: auto;
+		text-align: center;
+		font-family: var(--font-text);
+		font-size: 28px;
+		font-weight: 700;
+		background-color: var(--color-secondary);
+		color: var(--color-third);
+	}
+</style>

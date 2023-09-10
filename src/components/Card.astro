@@ -1,0 +1,65 @@
+---
+interface Props {
+	image: string;
+	source: string;
+	title: string;
+	description: string;
+}
+
+const { image, source, title, description } = Astro.props;
+---
+
+<a class="Card__container" href={source} >
+	<picture>
+		<source media="(max-width: 426px)" srcset={image} width={165} height={180} />
+		<source media="(min-width: 427px) and (max-width: 619px)" srcset={image} width={198} height={216} />
+		<source media="(min-width: 620px)" srcset={image} width={275} height={300} />
+		<img class='Card__picture' alt={title} title={title} />
+	</picture>
+	<div class="Card__content" >
+	   <h3>{title}</h3>
+	   <p>{description}</p>
+	</div>
+</a>
+
+<style>
+	.Card__container {
+		margin: 12px 4px;
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		background: var(--color-third);
+		border: 3px solid var(--color-third);
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+	.Card__picture {
+		clip-path: polygon(0 0,100% 0,100% 95%, 0 100%);
+	}
+	.Card__content {
+		margin: 0%;
+		padding: 3px;
+		width: 275px;
+		box-sizing: border-box;
+		background: var(--color-third);
+		color: var(--color-primary);
+		flex-grow: 1;
+		flex-shrink: 1;	
+	}
+	.Card__content > h3 {
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 426px) {
+		.Card__content {
+			width: 165px;
+			font-size: 0.8rem;
+		}
+	}
+	@media only screen and (min-width: 427px) and (max-width: 620px) {
+		.Card__content {
+			width: 198px;
+			font-size: 0.9rem;
+		}
+	}
+</style>

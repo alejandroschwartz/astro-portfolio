@@ -1,0 +1,116 @@
+---
+import SvgCss from "./icons/SvgCss.astro";
+import SvgGit from "./icons/SvgGit.astro";
+import SvgHtml from "./icons/SvgHtml.astro";
+import SvgJavascript from "./icons/SvgJavascript.astro";
+import SvgNode from "./icons/SvgNode.astro";
+import SvgReact from "./icons/SvgReact.astro";
+---
+
+<div class="icon">
+    <h2 class="icon__h2">PRINCIPALES TECNOLOGIAS</h2>
+    <div class="icons__container" >
+        <div class="icons">
+            <SvgHtml fontSize={72} color="#313434" />
+            <p>HTML</p>
+        </div>
+        <div class="icons">
+            <SvgCss fontSize={72} color="#313434" />
+            <p>CSS</p>
+        </div>
+        <div class="icons">
+            <SvgJavascript fontSize={72} color="#313434" />
+            <p>JAVASCRIPT</p>
+        </div>
+        <div class="icons">
+            <SvgReact fontSize={72} color="#313434" />
+            <p>REACT</p>
+        </div>
+        <div class="icons">
+            <SvgNode fontSize={72} color="#313434" />
+            <p>NODE</p>
+        </div>
+        <div class="icons">
+            <SvgGit fontSize={72} color="#313434" />
+            <p>GIT</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon {
+        background: var(--color-primary);
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 120px 6px;
+    }
+    .icon__h2 {
+        margin: 0%;
+        width: 100%;
+        text-align: center;
+        font-family: var(--font-text);
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--color-third);
+    }
+    .icons__container {
+        margin: auto;
+        padding: 48px 0px;
+        width: 100%;
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-column: 160px;
+        justify-content: space-around;
+    }
+    .icons {
+        min-width: 100px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .icons > p {
+        padding-top: 6px;
+        width: 100%;
+        font-family: var(--font-text);
+    }
+
+    @media only screen and (max-width: 640px) {
+        .icons__container {
+            grid-template-columns: repeat(3, 100px);
+        }
+    }
+</style>
+
+
+<!-- 
+const SvgBars = () => {
+    return (
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            height="36px" 
+            width="36px"
+            viewBox="0 0 448 512"
+            color="#313434"
+            fill="#313434"
+        >
+            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+        </svg>
+    )
+};
+
+const SvgXmark = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" 
+            height="36px"
+            width="36px"
+            viewBox="0 0 384 512"
+            fill="#313434"
+            color="#313434"
+        >
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+        </svg>
+    )
+}; 
+-->

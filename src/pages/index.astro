@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import WaveHeader from '../components/icons/WaveHeader.astro';
+import Cards from '../components/Cards.astro';
+import Card from '../components/Card.astro';
+import Habilities from '../components/Habilities.astro';
+import initialState from '../InitialState';
+---
+
+<Layout title='Home Portfolio'>
+	<Hero/>
+	<WaveHeader/>
+	<h2 class="home__h2">
+		PROYECTOS DESTACADOS
+	</h2>
+	<Cards>
+		{initialState.myCard.map(item => (
+			<Card
+				image={item.image} 
+				source={item.source}
+				title={item.title}
+				description={item.description}
+			/>
+		))}
+	</Cards>
+	<Habilities/>
+</Layout>
+
+<style>
+	.home__h2 {
+		width: 100%;
+		padding-bottom: 24px;
+		text-align: center;
+		font-family: var(--font-text);
+		font-size: 28px;
+		font-weight: 600;
+		color: var(--color-third);
+	}
+</style>
