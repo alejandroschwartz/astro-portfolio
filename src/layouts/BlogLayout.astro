@@ -1,0 +1,16 @@
+---
+import Layout from "./Layout.astro";
+
+---
+
+<Layout title="Blog">
+    <div class="blog__layout">
+        <slot/>
+    </div>
+</Layout>
+
+<style>
+    .blog__layout {
+        padding: 1rem;
+    }
+</style>

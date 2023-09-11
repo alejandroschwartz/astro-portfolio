@@ -1,6 +1,6 @@
 ---
     title: 'Markdown con React'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/BlogLayout.astro'
 ---
 
 

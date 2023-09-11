@@ -1,6 +1,6 @@
 ---
     title: 'Configuración de Oh-my-posh en terminal'
-    layout: '../../layouts/Layout.astro'
+    layout: '../../layouts/BlogLayout.astro'
 ---
 
 

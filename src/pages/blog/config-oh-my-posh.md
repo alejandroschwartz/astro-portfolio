@@ -1,6 +1,6 @@
 ---
   title: 'Configuración de Oh-my-posh en terminal'
-  layout: '../../layouts/Layout.astro'
+  layout: '../../layouts/BlogLayout.astro'
 ---
 
 # ¿Cómo personalizar WSL en la terminal de Windows con Oh-My-Post? 

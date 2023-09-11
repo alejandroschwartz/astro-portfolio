@@ -1,14 +1,14 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import InitialState from '../InitialState';
 import Card from '../components/Card.astro';
 import Cards from '../components/Cards.astro';
 import WaveHeader from '../components/icons/WaveHeader.astro';
-import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Mis proyectos'>
     <div>
-		<h2 class="projects__h2" >
+		<h2 class="home__h2" >
 			TODOS MIS PROYECTOS
 		</h2>
 		<WaveHeader/>
@@ -26,15 +26,13 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-    .projects__h2 {
+	.home__h2 {
 		width: 100%;
-		padding-top: 60px;
-		margin: auto;
+		padding-bottom: 24px;
 		text-align: center;
 		font-family: var(--font-text);
 		font-size: 28px;
-		font-weight: 700;
-		background-color: var(--color-secondary);
+		font-weight: 600;
 		color: var(--color-third);
 	}
 </style>
