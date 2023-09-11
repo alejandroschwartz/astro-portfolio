@@ -1,29 +1,15 @@
 ---
-// interface Props {
-// 	title: string;
-// }
-
-// let burgerButton = false
-// function handleClick() {
-//     let miBoton = document.getElementById("miBoton");
-//     let propiedadActual = miBoton.disabled;
-//     miBoton.disabled = !propiedadActual;
-// }
-// const { title } = Astro.props;
+import SvgBars from "./icons/SvgBars.astro"
 ---
 
 <nav class="navbarItems" >
     <a href="/" class="navbar__logo--link" >
         <h1 class="navbar__logo" >Alejandro Schwartz</h1>
     </a>
-    <div class="menu__icon" id="miBoton" onclick="handleClick()" >
-        <!-- {this.state.clicked 
-            ? <FontAwesomeIcon icon={faXmark} fontSize={28} />
-            : <FontAwesomeIcon icon={faBars}  fontSize={28} />
-        } -->
+    <div class="menu__icon" id="bars" >
+        <SvgBars/>
     </div>
-    <!-- <ul class={this.state.clicked ? 'nav__menu active' : 'nav__menu'} onclick="handleClick()" > -->
-    <ul class="nav__menu" >    
+    <ul class="nav__menu" id="menu" >
         <a href="/" class="nav__links" >
             <li>Sobre mí</li>
         </a>
@@ -36,7 +22,17 @@
     </ul>
 </nav>
 
-<style>
+<script>
+    const menu = document.getElementById("menu");
+    const bars = document.getElementById("bars");
+    if (bars) {
+        bars.addEventListener("click", () => {
+            menu.classList.toggle('active');
+        });
+    }
+</script>
+
+<style is:global>
     .navbarItems {
         margin: 0%;
         box-sizing: border-box; 

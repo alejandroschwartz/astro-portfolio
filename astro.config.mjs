@@ -17,6 +17,7 @@ export default defineConfig({
       display: "standalone",
       prefer_related_applications: false,
       related_applications: [],
+      icon: "public/maskable.png",
       icons: [
         {
           src: "public/maskable.png",
