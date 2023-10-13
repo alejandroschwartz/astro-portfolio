@@ -1,0 +1,93 @@
+---
+// import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+// import {
+//   SITE_TITLE,
+//   SITE_DESCRIPTION,
+//   SITE_DEFAULT_OG_IMAGE,
+// } from '../site_config';
+
+export interface Props {
+  /** Title of the page */
+	title?: string;
+  /** Description of the page */
+  description?: string;
+  /** OpenGraph thumbnail of the page */
+  thumbnail?: {
+    /** URL of the thumbnail */
+    src: string;
+    /** Alt text of the thumbnail */
+    alt: string;
+  };
+  imagePost?: string;
+  /** Canonical URL of the page */
+  canonical?: string;
+}
+
+const {
+  // title = SITE_TITLE,
+  // description = SITE_DESCRIPTION,
+  // thumbnail = {
+  //   src: SITE_DEFAULT_OG_IMAGE,
+  //   alt: SITE_TITLE
+  // },
+  imagePost,
+  canonical,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<!-- <title>{title}</title> -->
+    <!-- <meta name="description" content={description}> -->
+		<meta name="generator" content={Astro.generator} />
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- <meta property="og:title" content={title} /> -->
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:description" content={description} /> -->
+    <!-- <meta property="og:image" content={thumbnail.src} /> -->
+    <meta property="og:url" content={Astro.request.url} />
+    <meta name="twitter:card" content="summary_large_image" />
+	</head>
+
+  <body class="dark:bg-zinc-900 scroll-smooth dark:[color-scheme:dark]">
+    <!-- <Navigation/> -->
+    <Header/>
+		<slot/>
+	</body>
+</html>
+
+<style is:global>
+	@import url(https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap);
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+
+		--font-title: 'Lobster', cursive;
+		--font-text: 'Montserrat', sans-serif;
+
+		--color-primary: #ffffff;
+		--color-secondary: #e2e2e2;
+		--color-third: #313434;
+		--color-fourth: #111190;
+	}
+	body {
+		padding: 0%;
+		margin: 0%;
+		font-family: var(--font-text);
+		box-sizing: border-box;
+	}
+</style>
+

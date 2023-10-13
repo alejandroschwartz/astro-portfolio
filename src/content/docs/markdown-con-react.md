@@ -1,21 +1,12 @@
 ---
     title: 'Markdown con React'
-    layout: '../../layouts/BlogLayout.astro'
 ---
-
-
-# ¿Como utilizar texto en formato markdown dentro de un componente en react?
-## En este post explicare como construí mi blog personal usando markdown, que elemento importe y algunos consejos.
-
-
-&nbsp;
 
 > ✏️ Por **Alejandro Schwartz**  
->
 > 📅 19 de junio del 2021
 
----
-
+## ¿Como utilizar texto en formato markdown dentro de un componente en react?
+***En este post explicare como construí mi blog personal usando markdown, que elemento importe y algunos consejos.***
 
 &nbsp;
 

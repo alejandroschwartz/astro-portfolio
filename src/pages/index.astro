@@ -6,15 +6,16 @@ import Cards from '../components/Cards.astro';
 import Card from '../components/Card.astro';
 import Habilities from '../components/Habilities.astro';
 import initialState from '../InitialState';
+import CardPrincipal from '../components/CardPrincipal.astro';
+import CardBlog from '../components/CardBlog.astro';
 ---
 
 <Layout title='Home Portfolio'>
 	<Hero/>
 	<WaveHeader/>
-	<h2 class="home__h2">
-		PROYECTOS DESTACADOS
-	</h2>
+	<h2 class="home__h2">PROYECTOS DESTACADOS</h2>
 	<Cards>
+		<CardPrincipal/>
 		{initialState.myCard.map(item => (
 			<Card
 				image={item.image} 
@@ -24,6 +25,7 @@ import initialState from '../InitialState';
 			/>
 		))}
 	</Cards>
+	<CardBlog/>
 	<Habilities/>
 </Layout>
 

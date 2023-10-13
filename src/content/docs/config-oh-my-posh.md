@@ -1,26 +1,18 @@
 ---
   title: 'Configuración de Oh-my-posh en terminal'
-  layout: '../../layouts/BlogLayout.astro'
 ---
 
-# ¿Cómo personalizar WSL en la terminal de Windows con Oh-My-Post? 
-## Este es mi apunte de como personalizar la Windows Terminal corriendo Ubunto.
-
-
-&nbsp;
-
 > ✏️ Por **Alejandro Schwartz**  
->
 > 📅 21 de junio del 2021
 
-
+## ¿Cómo personalizar WSL en la terminal de Windows con Oh-My-Post? 
+**Este es mi apunte de como personalizar la Windows Terminal corriendo Ubunto.**
 
 &nbsp;
 
 ### ¿Qué es Oh-My-Posh?
 
 Es un tema para personalizar cualquier terminal. Permite visualizarla mediante un conjunto de colores para definir y representar mejor los mensajes. Todo es personalizable.
-
 
 &nbsp;
 

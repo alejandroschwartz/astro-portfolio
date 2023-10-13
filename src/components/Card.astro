@@ -11,8 +11,8 @@ const { image, source, title, description } = Astro.props;
 
 <a class="Card__container" href={source} >
 	<picture>
-		<source media="(max-width: 426px)" srcset={image} width={165} height={180} />
-		<source media="(min-width: 427px) and (max-width: 619px)" srcset={image} width={198} height={216} />
+		<source media="(max-width: 442px)" srcset={image} width={165} height={180} />
+		<source media="(min-width: 443px) and (max-width: 619px)" srcset={image} width={198} height={216} />
 		<source media="(min-width: 620px)" srcset={image} width={275} height={300} />
 		<img class='Card__picture' alt={title} title={title} />
 	</picture>
@@ -44,12 +44,11 @@ const { image, source, title, description } = Astro.props;
 		background: var(--color-third);
 		color: var(--color-primary);
 		flex-grow: 1;
-		flex-shrink: 1;	
+		flex-shrink: 1; 
 	}
 	.Card__content > h3 {
 		text-align: center;
 	}
-
 	@media only screen and (max-width: 426px) {
 		.Card__content {
 			width: 165px;

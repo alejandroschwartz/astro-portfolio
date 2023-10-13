@@ -1,0 +1,85 @@
+---
+import SvgReact from "./icons/SvgReact.astro";
+
+---
+
+<div class='CardPrincipal__container'>
+    <div class='CardPrincipal__item'>
+        <img 
+            class='CardPrincipal__image' 
+            src='https://res.cloudinary.com/dhdhpvhkg/image/upload/c_scale,q_auto,w_1366/v1694696501/Portfolio/listando-tareas-mobile.webp'
+        />
+    </div>
+    <div class='CardPrincipal__item'>
+        <h3>Listando tareas (PWA)</h3>
+        <p>
+            Aplicación de tareas, desarrollada tanto para desktop como para mobile, siendo una Progressive web App. 
+            <br/><br/>Creada con React, SASS y persistiendo los datos en el localstorage. Configure Webpack con Workbox y Manifest para crear la PWA.
+        </p>
+        <div class="CardPrincipal__buttons">
+            <a class="CardPrincipal__link" href="https://listandotareas.netlify.app/">
+                <!-- <p><FontAwesomeIcon icon={faChrome} fontSize={24} color="#313434" /> Pruebalo!</p> -->
+                <p> Pruebalo! </p>
+            </a>
+            <a class="CardPrincipal__link" href="https://github.com/alejandroschwartz/react-todo">
+                <!-- <p><FontAwesomeIcon icon={faGithub} fontSize={24} color="#313434" /> Ver código</p> -->
+                <p> Ver código </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .CardPrincipal__buttons {
+        display:'flex'; 
+        width:'100%'; 
+        margin-top: 1rem;
+    }
+    .CardPrincipal__container {
+        width:100%;
+        border:3px solid  var(--color-third);
+        border-radius:1rem;
+        font-family: var(--font-text);
+        margin-bottom: 2rem;
+    }
+    .CardPrincipal__container > h3 {
+        font-weight: 700;
+    }
+    .CardPrincipal__item {
+        width:100%;
+        padding: 1rem;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .CardPrincipal__item > h3 {
+        font-weight: 700;
+    }
+    .CardPrincipal__image {
+        object-fit: cover;
+        width: 70%;
+        padding: 0 15%;
+    }
+    .CardPrincipal__link {
+        height: 24px;
+        width: 140px;
+        margin-right: 1rem;
+        padding: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color:  var(--color-third);
+        border:3px solid  var(--color-third);
+        border-radius: 1rem;
+    }
+    .CardPrincipal__link > p {
+        margin: 0%;
+        text-align: center;
+    } 
+    @media only screen and (max-width: 443px) {
+        .CardPrincipal__image {
+            width: 100%;
+            padding: 0;
+        }
+    }
+</style>

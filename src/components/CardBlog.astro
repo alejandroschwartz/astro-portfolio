@@ -1,0 +1,64 @@
+<div class="CardBlog__container">
+    <h2 class="CardBlog__h2">VISITA MI BLOG</h2>
+    <div class='CardBlog__item'>
+        <p><strong>📚 ¡Explora el mundo del Desarrollo Web Frontend en profundidad en mi blog!</strong></p> 
+        <p>
+            📝 Sumergirte en tecnologías clave como HTML, CSS, JavaScript, React, Node.js y el manejo de la consola.
+            Construye aplicaciones web escalables y eficientes.
+        </p>
+        <p>👉 ¡Visita el blog ahora y expande tus habilidades en el desarrollo web! </p>
+        <div style={{ display:'flex', width:'100%' }} >
+            <a class="CardBlog__link" href="/blog">
+                <p>
+                    <!-- <FontAwesomeIcon icon={faBlog} fontSize={24} color="#313434" />  -->
+                    Visítalo!
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .CardBlog__container {
+        max-width: 680px;
+        margin: auto;
+        padding: 120px 0;
+    }
+    .CardBlog__h2 {
+        margin: 0%;
+        width: 100%;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #313434;
+    }
+    .CardBlog__item {
+        width:100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .CardBlog__link {
+        height: 24px;
+        width: 140px;
+        padding: 0.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $text-title;
+        border:3px solid $text-title;
+        border-radius: 1rem;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    .CardBlog__link > p {
+        margin: 0%;
+        text-align: center;
+    }
+</style>

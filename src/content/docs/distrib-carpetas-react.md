@@ -1,21 +1,12 @@
 ---
     title: 'Configuración de Oh-my-posh en terminal'
-    layout: '../../layouts/BlogLayout.astro'
 ---
-
-
-# ¿Como distribuyo las carpetas en un proyecto de React?
-## En este post explicare una forma de organizarlas, la que utilizo, aunque no sea la única.
-
-
-&nbsp;
 
 > ✏️ Por **Alejandro Schwartz**  
->
 > 📅 3 de agosto del 2023
 
----
-
+## ¿Como distribuyo las carpetas en un proyecto de React?
+**En este post explicare una forma de organizarlas, la que utilizo, aunque no sea la única.**
 
 &nbsp;
 
