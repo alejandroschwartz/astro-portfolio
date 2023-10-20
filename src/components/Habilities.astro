@@ -1,38 +1,68 @@
 ---
+import SvgAstro from "./icons/SvgAstro.astro";
 import SvgCss from "./icons/SvgCss.astro";
 import SvgGit from "./icons/SvgGit.astro";
 import SvgHtml from "./icons/SvgHtml.astro";
+import SvgJava from "./icons/SvgJava.astro";
+import SvgJavaSpring from "./icons/SvgJavaSpring.astro";
 import SvgJavascript from "./icons/SvgJavascript.astro";
+import SvgPosgre from './icons/SvgPostgre.astro';
 import SvgNode from "./icons/SvgNode.astro";
+import SvgExpress from "./icons/SvgExpress.astro";
 import SvgReact from "./icons/SvgReact.astro";
+import SvgRedux from "./icons/SvgRedux.astro";
 ---
 
 <div class="icon">
     <h2 class="icon__h2">PRINCIPALES TECNOLOGIAS</h2>
     <div class="icons__container" >
         <div class="icons">
-            <SvgHtml fontSize={72} color="#313434" />
+            <SvgHtml />
             <p>HTML</p>
         </div>
         <div class="icons">
-            <SvgCss fontSize={72} color="#313434" />
+            <SvgCss />
             <p>CSS</p>
         </div>
         <div class="icons">
-            <SvgJavascript fontSize={72} color="#313434" />
+            <SvgJavascript />
             <p>JAVASCRIPT</p>
         </div>
         <div class="icons">
-            <SvgReact fontSize={72} color="#313434" />
+            <SvgReact />
             <p>REACT</p>
         </div>
         <div class="icons">
-            <SvgNode fontSize={72} color="#313434" />
+            <SvgRedux />
+            <p>REDUX</p>
+        </div>
+        <div class="icons">
+            <SvgAstro />
+            <p>ASTRO</p>
+        </div>
+        <div class="icons">
+            <SvgNode />
             <p>NODE</p>
         </div>
         <div class="icons">
-            <SvgGit fontSize={72} color="#313434" />
+            <SvgExpress />
+            <p>EXPRESS</p>
+        </div>
+        <div class="icons">
+            <SvgGit />
             <p>GIT</p>
+        </div>
+        <div class="icons">
+            <SvgJava />
+            <p>JAVA</p>
+        </div>
+        <div class="icons">
+            <SvgJavaSpring />
+            <p>SPRINGBOOT</p>
+        </div>
+        <div class="icons">
+            <SvgPosgre/>
+            <p>POSTGRESQL</p>
         </div>
     </div>
 </div>
@@ -65,6 +95,7 @@ import SvgReact from "./icons/SvgReact.astro";
     }
     .icons {
         min-width: 100px;
+        margin-top: 3rem;
         display: flex;
         flex-direction: column;
         text-align: center;

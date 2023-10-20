@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="hero__image" >
             <img 
-                src="https://res.cloudinary.com/dhdhpvhkg/image/upload/c_scale,q_80,w_260/v1692988988/Portfolio/ale-hero.webp"
+                src="https://res.cloudinary.com/dhdhpvhkg/image/upload/c_scale,q_80,w_260,h_260/v1692988988/Portfolio/ale-hero.webp"
                 alt="foto de perfil Alejandro Schwartz"
                 title="foto de perfil Alejandro Schwartz"
             />
@@ -30,7 +30,7 @@
     }
     .hero {
         margin: auto;
-        max-width: 1240px; 
+        max-width: 1024px; 
         display: flex;
         justify-content: space-between;
         align-items: center; 
@@ -49,6 +49,7 @@
     .hero__image > img {
         height: 260px;
         width: 260px; 
+        object-fit: cover;
         animation: fadeIn 2s ease;
     }
     @keyframes fadeIn {
@@ -62,7 +63,7 @@
         }
     }
     .hero__title {
-        width: 700px;
+        max-width: 700px;
         font-family: var(--font-text);
         font-weight: 700;
         font-size: 40px;
@@ -73,7 +74,7 @@
         color: var(--color-fourth);
     }
     .hero__text {
-        max-width: 1222px;
+        max-width: 1024px;
         margin: auto;
         margin-top: 48px;
         padding-left: 12px;
@@ -89,6 +90,7 @@
         }
         .hero__image {
             margin: auto;
+            margin-bottom: 1.5rem;
             height: 180px;
             width: 180px;
         }

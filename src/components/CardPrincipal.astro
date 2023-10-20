@@ -30,11 +30,6 @@ import SvgReact from "./icons/SvgReact.astro";
 </div>
 
 <style>
-    .CardPrincipal__buttons {
-        display:'flex'; 
-        width:'100%'; 
-        margin-top: 1rem;
-    }
     .CardPrincipal__container {
         width:100%;
         border:3px solid  var(--color-third);
@@ -56,12 +51,18 @@ import SvgReact from "./icons/SvgReact.astro";
     }
     .CardPrincipal__image {
         object-fit: cover;
-        width: 70%;
+        width: 100%;
         padding: 0 15%;
     }
+    .CardPrincipal__buttons {
+        margin: 0%;
+        margin-top: 1rem;
+        display: flex;
+    }
     .CardPrincipal__link {
-        height: 24px;
-        width: 140px;
+        height: 2.5rem;
+        width: 8rem;
+        margin: 0%;
         margin-right: 1rem;
         padding: 0.25rem;
         display: flex;
@@ -74,6 +75,7 @@ import SvgReact from "./icons/SvgReact.astro";
     }
     .CardPrincipal__link > p {
         margin: 0%;
+        padding: 0%;
         text-align: center;
     } 
     @media only screen and (max-width: 443px) {

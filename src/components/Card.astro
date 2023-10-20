@@ -17,7 +17,7 @@ const { image, source, title, description } = Astro.props;
 		<img class='Card__picture' alt={title} title={title} />
 	</picture>
 	<div class="Card__content" >
-	   <h3>{title}</h3>
+	   <h3><strong>{title}</strong></h3>
 	   <p>{description}</p>
 	</div>
 </a>
@@ -38,7 +38,7 @@ const { image, source, title, description } = Astro.props;
 	}
 	.Card__content {
 		margin: 0%;
-		padding: 3px;
+		padding: 0.5rem;
 		width: 275px;
 		box-sizing: border-box;
 		background: var(--color-third);
@@ -48,6 +48,7 @@ const { image, source, title, description } = Astro.props;
 	}
 	.Card__content > h3 {
 		text-align: center;
+		padding-bottom: 0.5rem;
 	}
 	@media only screen and (max-width: 426px) {
 		.Card__content {
